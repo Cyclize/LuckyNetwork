@@ -1,3 +1,3 @@
 # Lucky Network
 
-Lucky Network's Landing Page Website by [Cyclize](https://github.com/Cyclize)
+A landing page concept for Lucky Network by [Cyclize](https://github.com/Cyclize)
