@@ -1,13 +1,6 @@
 <script lang="ts">
     import { fly } from 'svelte/transition';
     import { page } from '$app/stores';
-    import { onMount } from 'svelte';
-
-    let mobile;
-
-    onMount(async () => {
-        mobile = window.innerWidth < 1000
-    }) 
 </script>   
 
 <div class="app">
@@ -30,22 +23,20 @@
         </div>
     </header>
 
-    {#if !mobile}
-        <aside>
-            <a sveltekit:prefetch href="/bedwars" class='{$page.path === "/bedwars" ? "active" : ""}'>
-                <img class="gamemode" src="/ico/bedwars.webp" alt="BW" width="48" height="48">
-            </a>
-            <a href="/survival" class='{$page.path === "/survival" ? "active" : ""}'>
-                <img class="gamemode" src="/ico/survival.webp" alt="SV" width="48" height="48">
-            </a>
-            <a sveltekit:prefetch href="/practicepvp" class='{$page.path === "/practicepvp" ? "active" : ""}'>
-                <img class="gamemode" src="/ico/practicepvp.webp" alt="SV" width="48" height="48">
-            </a>
-            <a href="/skywars" class='{$page.path === "/skywars" ? "active" : ""}'>
-                <img class="gamemode" src="/ico/skywars.webp" alt="SW" width="48" height="48">
-            </a>
-        </aside>
-    {/if}
+    <aside>
+        <a sveltekit:prefetch href="/bedwars" class='{$page.path === "/bedwars" ? "active" : ""}'>
+            <img class="gamemode" src="/ico/bedwars.webp" alt="BW" width="48" height="48">
+        </a>
+        <a href="/survival" class='{$page.path === "/survival" ? "active" : ""}'>
+            <img class="gamemode" src="/ico/survival.webp" alt="SV" width="48" height="48">
+        </a>
+        <a sveltekit:prefetch href="/practicepvp" class='{$page.path === "/practicepvp" ? "active" : ""}'>
+            <img class="gamemode" src="/ico/practicepvp.webp" alt="SV" width="48" height="48">
+        </a>
+        <a href="/skywars" class='{$page.path === "/skywars" ? "active" : ""}'>
+            <img class="gamemode" src="/ico/skywars.webp" alt="SW" width="48" height="48">
+        </a>
+    </aside>
 
     {#key $page.path}
     <main in:fly="{{ y: 20, duration: 1000 }}">
@@ -240,6 +231,10 @@
 
         main {
             margin-left: unset;
+        }
+
+        aside {
+            display: none;
         }
 
         footer {
