@@ -22,10 +22,12 @@
 <section class="gamemodes">
     <h4>Featured Gamemodes</h4>
     <div>
-        <a sveltekit:prefetch href="/bedwars" class="gamemode bedwars">Bedwars</a>
-        <a href="/survival" class="gamemode survival">Survival</a>
-        <a sveltekit:prefetch href="/practicepvp" class="gamemode practicepvp">PracticePvP</a>
-        <a href="/skywars" class="gamemode skywars">Skywars</a>
+        <div>
+            <a sveltekit:prefetch href="/bedwars" class="gamemode bedwars">Bedwars</a>
+            <a href="/survival" class="gamemode survival">Survival</a>
+            <a sveltekit:prefetch href="/practicepvp" class="gamemode practicepvp">PracticePvP</a>
+            <a href="/skywars" class="gamemode skywars">Skywars</a>
+        </div>
     </div>
 </section>
 
@@ -103,10 +105,39 @@
         text-align: justify;
     }
 
-    .gamemodes div {
+    .gamemodes div div {
         overflow: auto;
         display: flex;
         align-items: center;
         gap: 1em;
+        padding: 0 1em;
+    }
+
+    .gamemodes > div {
+        position: relative;
+    }
+
+    .gamemodes > div:before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 1em;
+        background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
+    }
+    
+    .gamemodes > div:after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        z-index: 99;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 1em;
+        background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
     }
 </style>

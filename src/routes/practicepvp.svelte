@@ -27,23 +27,25 @@
 <section>
 	<h4>Leaderboard</h4>
 	<div>
-		{#if lbs}
-			{#each lbs as lb, i}
-				<div class="lb" style="background-image: url('https://mc-heads.net/body/{lb['name']}/left');">
-					<h5>{lb['name']}</h5>
-					<p>{lb['kills']}</p>
-					<h1>#{i + 1}</h1>
-				</div>
-			{/each}
-		{:else}
-			{#each Array(5) as _, i}
-				<div class="lb" style="background-image: url('https://mc-heads.net/body/MHF_Steve/left');">
-					<h5>Loading...<h5>
-					<p>N/A</p>
-					<h1>#{i + 1}</h1>
-				</div>
-			{/each}
-		{/if}
+		<div>
+			{#if lbs}
+				{#each lbs as lb, i}
+					<div class="lb" style="background-image: url('https://mc-heads.net/body/{lb['name']}/left');">
+						<h5>{lb['name']}</h5>
+						<p>{lb['kills']}</p>
+						<h1>#{i + 1}</h1>
+					</div>
+				{/each}
+			{:else}
+				{#each Array(5) as _, i}
+					<div class="lb" style="background-image: url('https://mc-heads.net/body/MHF_Steve/left');">
+						<h5>Loading...<h5>
+						<p>N/A</p>
+						<h1>#{i + 1}</h1>
+					</div>
+				{/each}
+			{/if}
+		</div>
 	</div>
 </section>
 
@@ -52,9 +54,38 @@
         margin-top: 4em;
     }
 
-	section > div {
+	section > div > div {
 		overflow: auto;
 		display: flex;
+		padding: 0 1em;
+	}
+
+	section > div {
+		position: relative;
+	}
+
+	section > div:before {
+		pointer-events: none;
+		content: '';
+		position: absolute;
+		z-index: 99;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 1em;
+		background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
+	}
+	
+	section > div:after {
+		pointer-events: none;
+		content: '';
+		position: absolute;
+		z-index: 99;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 1em;
+		background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
 	}
 
 	.lb {

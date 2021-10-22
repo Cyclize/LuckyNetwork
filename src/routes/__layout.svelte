@@ -16,16 +16,17 @@
             <a href="/">
                 <img src="/logo.webp" alt="logo" width="77" height="58" class="logo">
             </a>
-            <ul>
-                <li><a target="_blank" href="https://forums.luckynetwork.id">FORUMS</a></li>
-                <li><a target="_blank" href="https://store.luckynetwork.net/">STORE</a></li>
-                <li><a href="/famous">FAMOUS</a></li>
-            </ul>
+            <div>
+                <ul>
+                    <li><a target="_blank" href="https://forums.luckynetwork.id">FORUMS</a></li>
+                    <li><a target="_blank" href="https://store.luckynetwork.net/">STORE</a></li>
+                    <li><a href="/famous">FAMOUS</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="cta">
             <a href="/soon">LOGIN</a>
             <a href="/soon">REGISTER</a>
-            <!-- <a href="https://discord.gg/luckynetwork">DISCORD</a> -->
         </div>
     </header>
 
@@ -106,34 +107,17 @@
     header nav ul {
         position: relative;
         overflow: auto;
-        padding-left: 0;
-        margin: 0 3.4em;
+        padding: 0;
         list-style: none;
         display: flex;
         gap: 2em;
-    }
-
-    /* header nav ul:before {
-        pointer-events: none;
-        content: '';
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: 1em;
-        background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
-        background: linear-gradient(-90deg, #04020100 0%, #fff 100%);
+        margin: 0;
     }
     
-    header nav ul::after {
-        pointer-events: none;
-        content: '';
-        position: absolute;
-        right: 0;
-        height: 1em;
-        width: 1em;
-        background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
-        background: linear-gradient(90deg, #04020100 0%, #fff 100%);
-    } */
+    header nav div {
+        position: relative;
+        margin: 0 3.4em;
+    }
 
     header .cta {
         display: flex;
@@ -212,10 +196,42 @@
             margin: 2.4em 1.6em 1.2em;
         }
 
-        header nav ul {
+        header nav div {
             width: 8em;
             margin: 1em;
+        }
+
+        header nav div:before {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 1em;
+            background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
+        }
+        
+        header nav div:after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            z-index: 99;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 1em;
+            background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
+        }
+
+        header nav ul {
             gap: 1em;
+            padding: 0 1em;
+        }
+
+        header nav ul::-webkit-scrollbar {
+            height: 0;
         }
 
         header .cta a:first-child { 
