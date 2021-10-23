@@ -18,13 +18,15 @@
 
 <section>
     <h4>Our Members</h4>
-    <div class="members">
-        <a target="_blank" href="https://youtube.com/channel/UCmCKu42dBpkfVpxSzp7d9Kg" class="member the-dream-craft"><h5>THE DREAM CRAFT</h5></a>
-        <a target="_blank" href="https://youtube.com/channel/UCPr7T-6G8iNIlOlUWn02CNQ" class="member refal-rakha"><h5>REFAL RAKHA</h5></a>
-        <a target="_blank" href="https://youtube.com/channel/UCGvpRL0tZXJU2IxqVGuYUbg" class="member samsul-ch"><h5>SAMSUL CH</h5></a>
-        <a target="_blank" href="https://youtube.com/channel/UClRjC8YXhPOJx9LValMVL7g" class="member michellemcl"><h5>MICHELLEMCL</h5></a>
-        <a target="_blank" href="https://youtube.com/channel/UCwLcUgRdaCwDllc5MUTo6Pg" class="member clinkzforce"><h5>CLINKZFORCE</h5></a>
-        <a target="_blank" href="https://youtube.com/channel/UCl8vNn0IOp0xxc4UiVNd1Qg" class="member shansine"><h5>SHANSHINE</h5></a>
+    <div class="wrapper">
+        <div class="members">
+            <a target="_blank" href="https://youtube.com/channel/UCmCKu42dBpkfVpxSzp7d9Kg" class="member the-dream-craft"><h5>THE DREAM CRAFT</h5></a>
+            <a target="_blank" href="https://youtube.com/channel/UCPr7T-6G8iNIlOlUWn02CNQ" class="member refal-rakha"><h5>REFAL RAKHA</h5></a>
+            <a target="_blank" href="https://youtube.com/channel/UCGvpRL0tZXJU2IxqVGuYUbg" class="member samsul-ch"><h5>SAMSUL CH</h5></a>
+            <a target="_blank" href="https://youtube.com/channel/UClRjC8YXhPOJx9LValMVL7g" class="member michellemcl"><h5>MICHELLEMCL</h5></a>
+            <a target="_blank" href="https://youtube.com/channel/UCwLcUgRdaCwDllc5MUTo6Pg" class="member clinkzforce"><h5>CLINKZFORCE</h5></a>
+            <a target="_blank" href="https://youtube.com/channel/UCl8vNn0IOp0xxc4UiVNd1Qg" class="member shansine"><h5>SHANSHINE</h5></a>
+        </div>
     </div>
 </section>
 
@@ -107,7 +109,9 @@
         margin-top: 4em;
     }
 
-    
+    .wrapper {
+		position: relative;
+	}
 
     .members {
         overflow: auto;
@@ -164,5 +168,35 @@
     .benefits > div > div p {
         font-size: 1.2em;
         margin: 0;
+    }
+
+    @media (max-width: 1000px) {
+        .members {
+            padding: 0 1em;
+        }
+
+        .wrapper:before {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 1em;
+            background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
+        }
+
+        .wrapper:after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            z-index: 99;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 1em;
+            background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
+        }
     }
 </style>

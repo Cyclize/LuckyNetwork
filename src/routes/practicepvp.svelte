@@ -57,35 +57,11 @@
 	section > div > div {
 		overflow: auto;
 		display: flex;
-		padding: 0 1em;
+		padding: 0;
 	}
 
 	section > div {
 		position: relative;
-	}
-
-	section > div:before {
-		pointer-events: none;
-		content: '';
-		position: absolute;
-		z-index: 99;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 1em;
-		background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
-	}
-	
-	section > div:after {
-		pointer-events: none;
-		content: '';
-		position: absolute;
-		z-index: 99;
-		right: 0;
-		top: 0;
-		height: 100%;
-		width: 1em;
-		background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
 	}
 
 	.lb {
@@ -124,5 +100,39 @@
 	.lb h1 {
 		font-size: 3em;
 		z-index: -3;
+	}
+
+	@media (max-width: 1000px) {
+		section > div > div {
+			padding: 0 1em;
+		}
+
+		section > div > div::-webkit-scrollbar {
+            height: 0;
+        }
+
+		section > div:before {
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			z-index: 99;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 1em;
+			background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
+		}
+		
+		section > div:after {
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			z-index: 99;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 1em;
+			background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
+		}
 	}
 </style>

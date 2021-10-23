@@ -110,34 +110,44 @@
         display: flex;
         align-items: center;
         gap: 1em;
-        padding: 0 1em;
+        padding: 0;
     }
 
     .gamemodes > div {
         position: relative;
     }
 
-    .gamemodes > div:before {
-        pointer-events: none;
-        content: '';
-        position: absolute;
-        z-index: 99;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 1em;
-        background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
-    }
-    
-    .gamemodes > div:after {
-        pointer-events: none;
-        content: '';
-        position: absolute;
-        z-index: 99;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 1em;
-        background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
-    }
+    @media (max-width: 1000px) {
+		.gamemodes > div > div {
+			padding: 0 1em;
+		}
+
+		.gamemodes > div > div::-webkit-scrollbar {
+            height: 0;
+        }
+
+		.gamemodes > div:before {
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			z-index: 99;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 1em;
+			background: linear-gradient(-90deg, #04020100 0%, #040201ff 100%);
+		}
+		
+		.gamemodes > div:after {
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			z-index: 99;
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 1em;
+			background: linear-gradient(90deg, #04020100 0%, #040201ff 100%);
+		}
+	}
 </style>
