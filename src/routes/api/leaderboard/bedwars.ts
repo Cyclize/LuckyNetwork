@@ -18,7 +18,7 @@ const cacheClient = new Redis(REDIS_URL);
                     .then(res => res.json())
                     .then(data => {
                         data = JSON.stringify(data.data.map(({name, wins}) =>  ({name, wins})).slice(0, -5));
-                        cacheClient.setex('lb_bedwars', 3600, data);
+                        cacheClient.setex('lb_bedwars', 24*60*60, data);
                         resolve({ body: data });
                     });
             }

@@ -18,7 +18,7 @@ export async function get() {
                     .then(res => res.json())
                     .then(data => {
                         data = JSON.stringify(data.data.slice(0, -5));
-                        cacheClient.setex('lb_practicepvp', 3600, data);
+                        cacheClient.setex('lb_practicepvp', 24*60*60, data);
                         resolve({ body: data });
                     });
             }
