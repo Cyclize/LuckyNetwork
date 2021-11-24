@@ -5,22 +5,9 @@
     </style>
 </svelte:head>
 
-<!-- <script lang="ts" context="module">
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export async function load({ fetch }) {
-		const res = await fetch('/api/leaderboard/bedwars');
-		const data = await res.json();
-
-		return { props: { lbs: data } }
-	}
-</script> -->
-
 <script lang="ts">
 	import { onMount } from "svelte";
 
-	// export let lbs;
 	let lbs;
 
 	onMount(async () => {
