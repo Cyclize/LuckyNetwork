@@ -8,9 +8,6 @@
 
 <svelte:head>
     <title>Famous</title>
-    <style>
-        body { background-image: url('/bg/famous.webp'); }
-    </style>
 </svelte:head>
 
 <h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">GROW YOUR <span>CHANNEL</span> <br>TOGETHER WITH US</h1>

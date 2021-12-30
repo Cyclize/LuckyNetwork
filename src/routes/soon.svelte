@@ -6,9 +6,6 @@
 
 <svelte:head>
     <title>Coming Soon</title>
-    <style>
-        body { background-image: url('/bg/error.webp'); }
-    </style>
 </svelte:head>
 
 <h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">THE PAGE YOU VISITED IS <br>CURRENTLY <span>UNDER CONSTRUCTION</span> <br>UNTIL FUTURE NOTICE</h1>

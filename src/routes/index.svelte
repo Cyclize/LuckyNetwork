@@ -11,9 +11,6 @@
 
 <svelte:head>
     <title>Home</title>
-    <style>
-        body { background-image: url('/bg/home.webp'); }
-    </style>
 </svelte:head>
 
 <h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">JOIN OVER <span>1000+</span> PLAYERS <br>ON LUCKY NETWORK</h1>

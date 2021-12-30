@@ -1,8 +1,5 @@
 <svelte:head>
     <title>PracticePvP</title>
-    <style>
-        body { background-image: url('/bg/practicepvp.webp'); }
-    </style>
 </svelte:head>
 
 <script lang="ts">

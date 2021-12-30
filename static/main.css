@@ -4,8 +4,8 @@
 
 html, body {
 	min-height: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,9 +14,6 @@ body {
     overflow-y: scroll;
     font-size: 1.4vw;
     font-family: 'Poppins', sans-serif;
-    background-repeat: no-repeat;
-    transition: background .6s cubic-bezier(.37,0,.63,1);
-    background-size: 100% auto;
 }
 
 ::-webkit-scrollbar {
@@ -31,7 +28,6 @@ body {
 @media (max-width: 1000px) {
     body {
         font-size: 4.2vw;
-        background-image: none !important;
     }
 }
 

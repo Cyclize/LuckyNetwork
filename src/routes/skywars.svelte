@@ -1,8 +1,5 @@
 <svelte:head>
     <title>Skywars</title>
-    <style>
-        body { background-image: url('/bg/skywars.webp'); }
-    </style>
 </svelte:head>
 
 <h2 data-scroll data-scroll-speed="1.4" data-scroll-position="top">

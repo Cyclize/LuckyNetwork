@@ -1,8 +1,5 @@
 <svelte:head>
     <title>Bedwars</title>
-    <style>
-        body { background-image: url('/bg/bedwars.webp'); }
-    </style>
 </svelte:head>
 
 <script lang="ts">

@@ -1,9 +1,19 @@
 <script>
-    import { fly } from 'svelte/transition';
+    import { fade, fly } from 'svelte/transition';
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
 
     export let scroll
+
+    const BACKGROUND_IMAGE = {
+        '/': 'home',
+        '/bedwars': 'bedwars',
+        '/practicepvp': 'practicepvp',
+        '/survival': 'survival',
+        '/skywars': 'skywars',
+        '/famous': 'famous',
+        '/soon': 'error'
+    }
 
     onMount(() => {
         import('locomotive-scroll').then((locomotiveModule) => {
@@ -23,7 +33,11 @@
     })
 </script>   
 
-<div class="app" data-scroll-container>
+{#key $page.path}
+<img src="/bg/{BACKGROUND_IMAGE[$page.path]}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
+{/key}
+
+<div class="app">
     <header>
         <nav>
             <a href="/">
@@ -74,6 +88,19 @@
 </div>
 
 <style>
+    .background {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: -999;
+    }
+
+    @media (max-width: 1000px) {
+        .background {
+            display: none;
+        }
+    }
+
     .logo {
         width: 5em;
         height: auto;
@@ -85,7 +112,7 @@
     }
 
     .app {
-        margin: 2.4em 4.8em 1.2em;
+        padding: 2.4em 4.8em 1.2em;
     }
 
     header {
@@ -204,7 +231,7 @@
 
     @media (max-width: 1000px) {
         .app {
-            margin: 2.4em 1.6em 1.2em;
+            padding: 2.4em 1.6em 1.2em;
         }
 
         header nav div {
