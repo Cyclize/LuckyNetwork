@@ -3,8 +3,6 @@
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
 
-    export let scroll
-
     const BACKGROUND_IMAGE = {
         '/': 'home',
         '/bedwars': 'bedwars',
@@ -15,14 +13,14 @@
         '/soon': 'error'
     }
 
-    onMount(() => {
-        import('locomotive-scroll').then((locomotiveModule) => {
-            scroll = new locomotiveModule.default({
-                el: document.querySelector('[data-scroll-container]'),
-                smooth: true,
-                smoothMobile: false,
-                multiplier: .4
-            })
+    onMount(async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
+
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            smoothMobile: false,
+            multiplier: .4
         })
 
         window.addEventListener('sveltekit:navigation-end', () => {
