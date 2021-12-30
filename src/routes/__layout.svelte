@@ -1,9 +1,29 @@
-<script lang="ts">
+<script>
     import { fly } from 'svelte/transition';
     import { page } from '$app/stores';
+    import { onMount } from 'svelte';
+
+    export let scroll
+
+    onMount(() => {
+        import('locomotive-scroll').then((locomotiveModule) => {
+            scroll = new locomotiveModule.default({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                smoothMobile: false,
+                multiplier: .4
+            })
+        })
+
+        setInterval(() => {
+            scroll.update()
+        }, 3000);
+
+        return () => scroll.destroy()
+    })
 </script>   
 
-<div class="app">
+<div class="app" data-scroll-container>
     <header>
         <nav>
             <a href="/">
@@ -23,7 +43,7 @@
         </div>
     </header>
 
-    <aside>
+    <aside data-scroll data-scroll-speed="8" data-scroll-position="top">
         <a sveltekit:prefetch href="/bedwars" class='{$page.path === "/bedwars" ? "active" : ""}'>
             <img class="gamemode" src="/ico/bedwars.webp" alt="BW" width="48" height="48">
         </a>

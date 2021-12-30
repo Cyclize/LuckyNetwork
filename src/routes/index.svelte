@@ -16,10 +16,10 @@
     </style>
 </svelte:head>
 
-<h1>JOIN OVER <span>1000+</span> PLAYERS <br>ON LUCKY NETWORK</h1>
-<button id="copy" on:click={copyIP}>PLAY.LUCKYNETWORK.NET</button>
+<h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">JOIN OVER <span>1000+</span> PLAYERS <br>ON LUCKY NETWORK</h1>
+<button id="copy" on:click={copyIP} data-scroll data-scroll-speed="1" data-scroll-position="top">PLAY.LUCKYNETWORK.NET</button>
 
-<section class="gamemodes">
+<section class="gamemodes" data-scroll data-scroll-speed="1.2" data-scroll-position="top">
     <h4>Featured Gamemodes</h4>
     <div>
         <div>
@@ -31,7 +31,7 @@
     </div>
 </section>
 
-<section>
+<section data-scroll data-scroll-speed="1.4" data-scroll-position="top">
     <h4>About Lucky Network</h4>
     <p class="about">
         LuckyNetwork started off as a big minecraft network that is based in Indonesia. 

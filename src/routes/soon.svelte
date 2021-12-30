@@ -11,8 +11,8 @@
     </style>
 </svelte:head>
 
-<h1>THE PAGE YOU VISITED IS <br>CURRENTLY <span>UNDER CONSTRUCTION</span> <br>UNTIL FUTURE NOTICE</h1>
-<button id="copy" on:click={goBack}>GO BACK</button>
+<h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">THE PAGE YOU VISITED IS <br>CURRENTLY <span>UNDER CONSTRUCTION</span> <br>UNTIL FUTURE NOTICE</h1>
+<button id="copy" on:click={goBack} data-scroll data-scroll-speed="1.2" data-scroll-position="top">GO BACK</button>
 
 <style>
     button {

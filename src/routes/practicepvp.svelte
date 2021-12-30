@@ -16,14 +16,14 @@
 	});
 </script>
 
-<h2>
+<h2 data-scroll data-scroll-speed="1.4" data-scroll-position="top">
     FIGHT ANOTHER PLAYER IN A FAIR 1V1 <br>
     OR PLAY WITH LOTS OF PEOPLE IN A <br>
     PARTY. THERE ARE ALSO EVENTS ANYONE <br>
     CAN JOIN.
 </h2>
 
-<section>
+<section data-scroll data-scroll-speed="1.2" data-scroll-position="top">
 	<h4>Leaderboard</h4>
 	<div>
 		<div>

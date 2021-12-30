@@ -16,14 +16,14 @@
 	})
 </script>
 
-<h2>
+<h2 data-scroll data-scroll-speed="1.4" data-scroll-position="top">
     IN BEDWARS, YOU'LL HAVE A BED TO <br>
 	PROTECT. IF THE BED IS BROKEN, YOU CAN'T <br>
     RESPAWN. YOUR GOAL IS TO DESTROY YOUR <br>
 	OPPONET'S BED. 
 </h2>
 
-<section>
+<section data-scroll data-scroll-speed="1.2" data-scroll-position="top">
 	<h4>Leaderboard</h4>
 	<div>
 		<div>

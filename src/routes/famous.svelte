@@ -13,10 +13,10 @@
     </style>
 </svelte:head>
 
-<h1>GROW YOUR <span>CHANNEL</span> <br>TOGETHER WITH US</h1>
-<button id="copy" on:click={learnMore}>LEARN MORE</button>
+<h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">GROW YOUR <span>CHANNEL</span> <br>TOGETHER WITH US</h1>
+<button id="copy" on:click={learnMore} data-scroll data-scroll-speed="1.2" data-scroll-position="top">LEARN MORE</button>
 
-<section>
+<section data-scroll data-scroll-speed="1.2" data-scroll-position="top">
     <h4>Our Members</h4>
     <div class="wrapper">
         <div class="members">
@@ -30,8 +30,8 @@
     </div>
 </section>
 
-<a href="#benefits" id="benefits"> </a>
-<section class="benefits">
+<a href="#benefits" id="benefits" data-scroll data-scroll-speed="1.2" data-scroll-position="top"> </a>
+<section class="benefits" data-scroll data-scroll-speed="1" data-scroll-position="top">
     <h4>Benefits</h4>
     <div>
         <div>
@@ -68,7 +68,7 @@
     </div>
 </section>
 
-<section>
+<section data-scroll data-scroll-speed="1.2" data-scroll-position="top">
     <h4>Requirements</h4>
     <ul>
         <li>The account that you had for promoting are related to games and a good place to get attention.</li>
