@@ -15,9 +15,9 @@
             })
         })
 
-        setInterval(() => {
+        window.addEventListener('sveltekit:navigation-end', () => {
             scroll.update()
-        }, 3000);
+        })
 
         return () => scroll.destroy()
     })
