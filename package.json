@@ -10,11 +10,11 @@
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.34.0"
+    "svelte": "^3.46.3"
   },
   "type": "module",
   "dependencies": {
-    "ioredis": "^4.27.10",
+    "ioredis": "^4.28.3",
     "locomotive-scroll": "^4.1.3"
   }
 }

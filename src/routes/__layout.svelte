@@ -13,6 +13,8 @@
         '/soon': 'error'
     }
 
+    let ready = false
+
     onMount(async () => {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
 
@@ -27,6 +29,8 @@
             scroll.update()
         })
 
+        ready = true
+
         return () => scroll.destroy()
     })
 </script>   
@@ -35,7 +39,8 @@
 <img src="/bg/{BACKGROUND_IMAGE[$page.path]}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
 {/key}
 
-<div class="app">
+{#if ready}
+<div class="app" in:fade="{{ duration: 600 }}">
     <header>
         <nav>
             <a href="/">
@@ -84,6 +89,7 @@
         </div>
     </footer>
 </div>
+{/if}
 
 <style>
     .background {
