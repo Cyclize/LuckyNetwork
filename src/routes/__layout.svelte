@@ -1,3 +1,16 @@
+<svelte:head>
+    <link rel="preload" href="/logo.webp" as="image" />
+    <link rel="preload" href="/ico/bedwars.webp" as="image" />
+    <link rel="preload" href="/ico/practicepvp.webp" as="image" />
+    <link rel="preload" href="/ico/skywars.webp" as="image" />
+    <link rel="preload" href="/ico/survival.webp" as="image" />
+    <link rel="preload" href="/preview/bedwars.webp" as="image" />
+    <link rel="preload" href="/preview/practicepvp.webp" as="image" />
+    <link rel="preload" href="/preview/skywars.webp" as="image" />
+    <link rel="preload" href="/preview/survival.webp" as="image" />
+    <link rel="preload" href="/bg/{BACKGROUND_IMAGE[$page.url.pathname]}.webp" as="image" />
+</svelte:head>
+
 <script>
     import { fade, fly } from 'svelte/transition';
     import { page } from '$app/stores';
@@ -84,8 +97,8 @@
     <footer>
         <p>© Copyright 2021 - Lucky Network. All Rights Reserved.</p>
         <div>
-            <a target="_blank" href="https://discord.gg/luckynetwork"><img src="/discord.svg" alt="discord"></a>
-            <a target="_blank" href="https://www.instagram.com/luckynetwork/"><img src="/instagram.svg" alt="instagram"></a>
+            <a target="_blank" href="https://discord.gg/luckynetwork"><img src="/discord.svg" alt="discord" loading="lazy"></a>
+            <a target="_blank" href="https://www.instagram.com/luckynetwork/"><img src="/instagram.svg" alt="instagram" loading="lazy"></a>
         </div>
     </footer>
 </div>
