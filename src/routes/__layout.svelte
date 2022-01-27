@@ -16,6 +16,8 @@
     let ready = false
 
     onMount(async () => {
+        ready = true
+
         const LocomotiveScroll = (await import('locomotive-scroll')).default
 
         const scroll = new LocomotiveScroll({
@@ -28,8 +30,6 @@
         window.addEventListener('sveltekit:navigation-end', () => {
             scroll.update()
         })
-
-        ready = true
 
         return () => scroll.destroy()
     })
