@@ -35,8 +35,8 @@
     })
 </script>   
 
-{#key $page.path}
-<img src="/bg/{BACKGROUND_IMAGE[$page.path]}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
+{#key $page.url.pathname}
+<img src="/bg/{BACKGROUND_IMAGE[$page.url.pathname]}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
 {/key}
 
 {#if ready}
@@ -61,21 +61,21 @@
     </header>
 
     <aside data-scroll data-scroll-speed="8" data-scroll-position="top">
-        <a sveltekit:prefetch href="/bedwars" class='{$page.path === "/bedwars" ? "active" : ""}'>
+        <a sveltekit:prefetch href="/bedwars" class='{$page.url.pathname === "/bedwars" ? "active" : ""}'>
             <img class="gamemode" src="/ico/bedwars.webp" alt="BW" width="48" height="48">
         </a>
-        <a href="/survival" class='{$page.path === "/survival" ? "active" : ""}'>
+        <a href="/survival" class='{$page.url.pathname === "/survival" ? "active" : ""}'>
             <img class="gamemode" src="/ico/survival.webp" alt="SV" width="48" height="48">
         </a>
-        <a sveltekit:prefetch href="/practicepvp" class='{$page.path === "/practicepvp" ? "active" : ""}'>
+        <a sveltekit:prefetch href="/practicepvp" class='{$page.url.pathname === "/practicepvp" ? "active" : ""}'>
             <img class="gamemode" src="/ico/practicepvp.webp" alt="SV" width="48" height="48">
         </a>
-        <a href="/skywars" class='{$page.path === "/skywars" ? "active" : ""}'>
+        <a href="/skywars" class='{$page.url.pathname === "/skywars" ? "active" : ""}'>
             <img class="gamemode" src="/ico/skywars.webp" alt="SW" width="48" height="48">
         </a>
     </aside>
 
-    {#key $page.path}
+    {#key $page.url.pathname}
     <main in:fly="{{ y: 20, duration: 1000 }}">
         <slot/>
     </main>
