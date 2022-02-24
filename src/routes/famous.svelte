@@ -1,17 +1,9 @@
-<script lang="ts">
-    import { goto } from "$app/navigation";
-
-    async function learnMore() {
-        goto('#benefits');
-    }
-</script>
-
 <svelte:head>
     <title>Famous</title>
 </svelte:head>
 
 <h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">GROW YOUR <span>CHANNEL</span> <br>TOGETHER WITH US</h1>
-<button id="copy" on:click={learnMore} data-scroll data-scroll-speed="1.2" data-scroll-position="top">LEARN MORE</button>
+<button data-scroll data-scroll-speed="1.2" data-scroll-position="top">LEARN MORE</button>
 
 <section data-scroll data-scroll-speed="1.2" data-scroll-position="top">
     <h4>Our Members</h4>

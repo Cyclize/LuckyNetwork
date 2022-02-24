@@ -37,7 +37,7 @@
             el: document.querySelector('[data-scroll-container]'),
             smooth: true,
             smoothMobile: false,
-            multiplier: .4
+            multiplier: .6
         })
 
         window.addEventListener('sveltekit:navigation-end', () => {
