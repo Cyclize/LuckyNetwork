@@ -95,7 +95,7 @@
     {/key}
 
     <footer>
-        <p>© Copyright 2021 - Lucky Network. All Rights Reserved.</p>
+        <p>© Copyright 2022 - Lucky Network. All Rights Reserved.</p>
         <div>
             <a target="_blank" href="https://discord.gg/luckynetwork"><img src="/discord.svg" alt="discord" loading="lazy"></a>
             <a target="_blank" href="https://www.instagram.com/luckynetwork/"><img src="/instagram.svg" alt="instagram" loading="lazy"></a>
@@ -225,7 +225,7 @@
 
     footer {
         margin-left: 8em;
-        margin-top: 8em;
+        margin-top: 6em;
         display: flex;
         gap: 1em;
         align-items: center;
