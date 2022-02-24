@@ -1,7 +1,4 @@
 <script lang="ts">
-    async function goBack() {
-        window.history.back();
-    }
 </script>
 
 <svelte:head>
@@ -9,7 +6,7 @@
 </svelte:head>
 
 <h1 data-scroll data-scroll-speed="1.4" data-scroll-position="top">THE PAGE YOU VISITED IS <br>CURRENTLY <span>UNDER CONSTRUCTION</span> <br>UNTIL FUTURE NOTICE</h1>
-<button id="copy" on:click={goBack} data-scroll data-scroll-speed="1.2" data-scroll-position="top">GO BACK</button>
+<button id="copy" on:click={() => history.back()} data-scroll data-scroll-speed="1.2" data-scroll-position="top">GO BACK</button>
 
 <style>
     button {

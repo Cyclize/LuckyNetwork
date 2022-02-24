@@ -8,13 +8,13 @@
     <link rel="preload" href="/preview/practicepvp.webp" as="image" />
     <link rel="preload" href="/preview/skywars.webp" as="image" />
     <link rel="preload" href="/preview/survival.webp" as="image" />
-    <link rel="preload" href="/bg/{BACKGROUND_IMAGE[$page.url.pathname]}.webp" as="image" />
+    <link rel="preload" href="/bg/{BACKGROUND_IMAGE[$page.url.pathname] || 'error'}.webp" as="image" />
 </svelte:head>
 
 <script>
-    import { fade, fly } from 'svelte/transition';
-    import { page } from '$app/stores';
-    import { onMount } from 'svelte';
+    import { fade, fly } from 'svelte/transition'
+    import { page } from '$app/stores'
+    import { onMount } from 'svelte'
 
     const BACKGROUND_IMAGE = {
         '/': 'home',
@@ -22,8 +22,7 @@
         '/practicepvp': 'practicepvp',
         '/survival': 'survival',
         '/skywars': 'skywars',
-        '/famous': 'famous',
-        '/soon': 'error'
+        '/famous': 'famous'
     }
 
     let ready = false
@@ -49,7 +48,7 @@
 </script>   
 
 {#key $page.url.pathname}
-    <img src="/bg/{BACKGROUND_IMAGE[$page.url.pathname]}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
+    <img src="/bg/{BACKGROUND_IMAGE[$page.url.pathname] || 'error'}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
 {/key}
 
 {#if ready}
