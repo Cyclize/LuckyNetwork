@@ -49,7 +49,7 @@
 </script>   
 
 {#key $page.url.pathname}
-<img src="/bg/{BACKGROUND_IMAGE[$page.url.pathname]}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
+    <img src="/bg/{BACKGROUND_IMAGE[$page.url.pathname]}.webp" alt="background" class="background" data-scroll data-scroll-speed="4" data-scroll-position="top" in:fade="{{ duration: 600 }}">
 {/key}
 
 {#if ready}
@@ -74,17 +74,17 @@
     </header>
 
     <aside data-scroll data-scroll-speed="8" data-scroll-position="top">
-        <a sveltekit:prefetch href="/bedwars" class='{$page.url.pathname === "/bedwars" ? "active" : ""}'>
-            <img class="gamemode" src="/ico/bedwars.webp" alt="BW" width="48" height="48">
+        <a sveltekit:prefetch href="/bedwars" class:active="{$page.url.pathname === "/bedwars"}">
+            <img class="gamemode" src="/ico/bedwars.webp" alt="Bedwars" width="48" height="48">
         </a>
-        <a href="/survival" class='{$page.url.pathname === "/survival" ? "active" : ""}'>
-            <img class="gamemode" src="/ico/survival.webp" alt="SV" width="48" height="48">
+        <a href="/survival" class:active="{$page.url.pathname === "/survival"}">
+            <img class="gamemode" src="/ico/survival.webp" alt="Survival" width="48" height="48">
         </a>
-        <a sveltekit:prefetch href="/practicepvp" class='{$page.url.pathname === "/practicepvp" ? "active" : ""}'>
-            <img class="gamemode" src="/ico/practicepvp.webp" alt="SV" width="48" height="48">
+        <a sveltekit:prefetch href="/practicepvp" class:active="{$page.url.pathname === "/practicepvp"}">
+            <img class="gamemode" src="/ico/practicepvp.webp" alt="PracticePvP" width="48" height="48">
         </a>
-        <a href="/skywars" class='{$page.url.pathname === "/skywars" ? "active" : ""}'>
-            <img class="gamemode" src="/ico/skywars.webp" alt="SW" width="48" height="48">
+        <a href="/skywars" class:active="{$page.url.pathname === "/skywars"}">
+            <img class="gamemode" src="/ico/skywars.webp" alt="Skywars" width="48" height="48">
         </a>
     </aside>
 
