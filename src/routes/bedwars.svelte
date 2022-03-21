@@ -17,7 +17,7 @@
     IN BEDWARS, YOU'LL HAVE A BED TO <br>
 	PROTECT. IF THE BED IS BROKEN, YOU CAN'T <br>
     RESPAWN. YOUR GOAL IS TO DESTROY YOUR <br>
-	OPPONET'S BED. 
+	OPPONENT'S BED. 
 </h2>
 
 <section data-scroll data-scroll-speed="1.2" data-scroll-position="top">
